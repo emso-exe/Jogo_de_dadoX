@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import random
 from math import ceil
 
@@ -97,19 +99,35 @@ def vitoria_ou_derrota(pontos, numero_jogadas, numero_tipo):
 
     if pontos >= pontos_corte:
         print("\n 💚 Você VENCEU! 😍 💚\n")
+        resultado = "vitoria"
     else:
         print("\n 💔 Você PERDEU! 😭 💔\n")
+        resultado = "derrota"
+
+    dados = (numero_jogadas, int(len(numero_jogadas)),
+             pontos, numero_tipo, resultado)
+    return dados
+
+
+def gravar_dados(t):
+    dados = ('{};{};{};{};{}'.format(t[0], t[1], t[2], t[3], t[4]))
+    try:
+        with open("jogo_de_dadox.txt", "a") as arquivo:
+            arquivo.write(dados)
+            arquivo.write('\n')
+    except FileNotFoundError as e:
+        print(e, ": Arquivo não encontrado!")
 
 
 if __name__ == '__main__':
 
     print('''
     +-------------------------------------------------------+
-    |                 🎲 JOGO DE DADOX 🎲                   | 
+    |                 🎲 JOGO DE DADOX 🎲                   |
     +-------------------------------------------------------+
     |  1º Digite seu número da sorte (1 à 6) ou se prefere  |
-    |     apostar em números pares ou ímpares.              | 
-    +-------------------------------------------------------+    
+    |     apostar em números pares ou ímpares.              |
+    +-------------------------------------------------------+
     |  2º Digite a quantidade de jogadas (1, 3, 5 ou 7)     |
     |     que irá apostar.                                  |
     +-------------------------------------------------------+
@@ -120,4 +138,5 @@ if __name__ == '__main__':
     if param1 != False:
         param2 = joga_dado_n_vezes(numero_de_jogadas())
         if param2 != False:
-            vitoria_ou_derrota(soma_pontos(param1, param2), param2, param1)
+            gravar_dados(vitoria_ou_derrota(
+                soma_pontos(param1, param2), param2, param1))
