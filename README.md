@@ -1,4 +1,4 @@
-<img src="jogo_de_dadox.png" alt="" width="130" height="200"> 
+<img src="jogo_de_dadox.png" alt="" width="130" height="180"> 
 
 # Jogo de DadoX
 
