@@ -8,7 +8,7 @@ Projeto de script que simula um Jogo de dados em Python 3 onde é definido o lad
 
 - Python
 
-## ...em execução
+## game.py em execução
 
 <img src="imagem_jogo_de_dadox.png" alt="" width="827" height="357"> 
 
