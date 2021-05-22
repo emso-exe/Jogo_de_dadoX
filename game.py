@@ -112,7 +112,7 @@ def vitoria_ou_derrota(pontos, numero_jogadas, numero_tipo):
 def gravar_dados(t):
     dados = ('{};{};{};{};{}'.format(t[0], t[1], t[2], t[3], t[4]))
     try:
-        with open("jogo_de_dadox.txt", "a") as arquivo:
+        with open("jogo_de_dadox.csv", "a") as arquivo:
             arquivo.write(dados)
             arquivo.write('\n')
     except FileNotFoundError as e:
