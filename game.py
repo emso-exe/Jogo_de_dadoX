@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import random
+from os.path import isfile
 from math import ceil
 
 
@@ -111,12 +112,24 @@ def vitoria_ou_derrota(pontos, numero_jogadas, numero_tipo):
 
 def gravar_dados(t):
     dados = ('{};{};{};{};{}'.format(t[0], t[1], t[2], t[3], t[4]))
-    try:
-        with open("jogo_de_dadox.csv", "a") as arquivo:
-            arquivo.write(dados)
-            arquivo.write('\n')
-    except FileNotFoundError as e:
-        print(e, ": Arquivo não encontrado!")
+
+    if not isfile('jogo_de_dadox.csv'):
+        cabecalho = ('nsort;njog;nponto;vapost;stat')
+        try:
+            with open("jogo_de_dadox.csv", "a") as arquivo:
+                arquivo.write(cabecalho)
+                arquivo.write('\n')
+                arquivo.write(dados)
+                arquivo.write('\n')
+        except Exception as e:
+            print(e, ": Ocorreu um erro na criação do arquivo!")
+    else:
+        try:
+            with open("jogo_de_dadox.csv", "a") as arquivo:
+                arquivo.write(dados)
+                arquivo.write('\n')
+        except Exception as e:
+            print(e, ": Ocorreu um erro na gravação dos dados!")
 
 
 if __name__ == '__main__':
