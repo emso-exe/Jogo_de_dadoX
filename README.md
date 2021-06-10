@@ -2,7 +2,7 @@
 
 # Jogo de DadoX
 
-Projeto de script que simula um Jogo de dados em Python 3 onde é definido o lado a ser apostado (_1, 2, 3, 4, 5 e 6_) ou se vai ser um número par ou ímpar, número de jogadas (_1, 3, 5 e 7_), pontuação dos acertos (1 ponto se escolheu par ou ímpar ou 3 pontos se apostou em um único número) e exibindo se o jogador ganhou ou perdeu o jogo.
+Projeto de script que simula um Jogo de dados em Python 3 onde é definido o lado a ser apostado (_1, 2, 3, 4, 5 e 6_) ou se vai ser um número par ou ímpar, número de jogadas (_1, 3, 5 e 7_), pontuação dos acertos (1 ponto se escolheu par ou ímpar ou 3 pontos se apostou em um único número) e exibindo se o jogador ganhou ou perdeu o jogo. Todas as jogadas são gravadas em um arquivo csv para análise.
 
 ## Tecnologias
 
