@@ -10,6 +10,8 @@ Projeto de script que simula um Jogo de dados em Python 3 onde é definido o lad
 
 ## game.py em execução
 
+![alt text](https://github.com/emso-exe/Jogo_de_dadoX/blob/main/jogo_de_dadox.gif "Jogo de dadoX em execução (GIF)")
+
 <img src="imagem_jogo_de_dadox.png" alt="" width="827" height="357"> 
 
 ## Créditos
